@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BOARD)
 TRIG = 7
 ECHO = 12
 
-GPIO.setup(TRIG.GPIO.OUT)
+GPIO.setup(TRIG,GPIO.OUT)
 GPIO.output(TRIG,0)
 
 GPIO.setup(ECHO,GPIO.IN)
