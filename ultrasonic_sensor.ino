@@ -1,11 +1,22 @@
 //Arduino code for control of the HC SR04 ultrasonic sensor
 
-void setup()
+int trig = 7;
+int echo = 8;
+
+void setup() 
 {
-  //blah blah blah
+  pinMode(trig, OUTPUT);
+  pinMode(echo, INPUT)  
+
 }
 
-void loop()
+void loop() 
 {
-  //blah blah blah
-} 
+  digitalWrite(trig,0);
+  delayMicroseconds(2);
+
+  digitalWrite(trig,1);
+  delayMicroseconds(10);
+  digitalWrite(trig,0);
+
+}
