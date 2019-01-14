@@ -1,4 +1,4 @@
-//Arduino code for control of the HC SR01 ultrasonic sensor
+//Arduino code for control of the HC SR04 ultrasonic sensor
 
 void setup()
 {
