@@ -4,6 +4,7 @@ int trig = 7;
 int echo = 8;
 unsigned long pulse_duration = 0
 int distance 
+int loop_time = 1000;
 
 void setup() 
 {
@@ -29,5 +30,5 @@ void loop()
   Serial.print("The distance is: ");
   Serial.println(distance);
   
-  //delay for 1 second, then loop 
+  delay(loop_time); 
 }
