@@ -3,7 +3,7 @@
 int trig = 7;
 int echo = 8;
 unsigned long pulse_duration = 0;
-int distance;
+unsigned long distance;
 int loop_time = 1000;
 
 void setup() 
@@ -23,12 +23,13 @@ void loop()
   delayMicroseconds(10);
   digitalWrite(trig,0);
   
-  pulse_duration = pulseIn(echo, HIGH) * 1000000; // units of seconds
+  pulse_duration = pulseIn(echo, HIGH); // units of seconds
 
-  distance = (343*pulse_duration)/2*100;
+  distance = (0.343*pulse_duration)/2;
   
   Serial.print("The distance is: ");
-  Serial.println(distance);
+  Serial.print(distance);
+  Serial.println(" mm");
   
   delay(loop_time); 
 }
